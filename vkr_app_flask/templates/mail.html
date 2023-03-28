@@ -1,0 +1,62 @@
+<div class = "login">
+    <h1>Предсказание значений модуля упругости при растяжении и прочности при растяжении</h1>
+     <h3>Введите значения известных параметров:</h3>
+
+    <form action="{{ url_for('predict')}}"method="post">
+    <p>
+        <label >Плотность, кг/м3 = </label>
+        <input type="text" name="1"  required="required" />
+    </p>
+    <p>
+        <label >Модуль упругости, ГПа = </label>
+        <input type="text" name="2"  required="required" />
+    </p>
+    <p>
+        <label >Количество отвердителя, м.% = </label>
+        <input type="text" name="3"  required="required" />
+    </p>   
+    <p>
+        <label >Содержание эпоксидных групп, %_2 = </label>
+        <input type="text" name="4"  required="required" />
+    </p> 
+    <p>
+        <label >Температура вспышки, С_2 = </label>
+        <input type="text" name="5"  required="required" />
+    </p>
+    <p>
+        <label >Поверхностная плотность, г/м2 = </label>
+        <input type="text" name="6"  required="required" />
+    </p>
+    <p>
+        <label >Прочность при растяжении, МПа = </label>
+        <input type="text" name="7"  required="required" />
+    </p>
+    <p>
+        <label >Потребление смолы, г/м2 = </label>
+        <input type="text" name="8"  required="required" />
+    </p>
+    <p>
+        <label >Угол нашивки, град = </label>
+        <input type="text" name="9"  required="required" />
+    </p>
+    <p>
+        <label >Шаг нашивки = </label>
+        <input type="text" name="10"  required="required" />
+    </p>
+        <button type="submit" class="btn">Предсказать</button>
+    </form>
+<br>
+<br>
+<p>
+    <h3>Результат модели:</h3>
+</p>
+<p>
+    <label >Модуль упругости при растяжении, ГПа = </label>
+    {{ output1 }}
+</p>
+<p>
+    <label >Прочность при растяжении, МПа = </label>
+    {{ output2 }}
+</p>	
+
+</div>

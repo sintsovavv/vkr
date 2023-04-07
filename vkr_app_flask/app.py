@@ -12,7 +12,6 @@ app = flask.Flask(__name__, template_folder = 'templates')
 
 model_1 = pickle.load(open('model_for_mod.pkl', 'rb'))
 model_2 = pickle.load(open('model_for_str.pkl', 'rb'))
-preprocessor = pickle.load(open('preprocessor.pkl', 'rb'))
 
 @app.route('/')
 def home():
